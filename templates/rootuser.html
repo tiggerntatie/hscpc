@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <form class="form-signin" action="{{url_for('rootuser')}}" method="post">
+    <h2 class="form-signin-heading">Please enter ROOT USER credentials</h2>
+    <input type="text" name="username" class="input-block-level, input-top" placeholder="Username" autofocus>
+    <input type="password" name="password" class="input-block-level, input-middle" placeholder="Password">
+    <input type="password" name="passwordcheck" class="input-block-level, input-bottom" placeholder="Password Again">
+    <button class="btn btn-large btn-primary btn-block" type="submit">Create Root</button>
+  </form>
+{% endblock %}
+
+
